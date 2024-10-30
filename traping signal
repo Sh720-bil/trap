@@ -1,0 +1,67 @@
+trap
+
+Sig
+
+Description
+
+Handler
+
+-----
+
+----------------
+
+------------------------------------------
+
+tdmon
+
+Start tandem
+
+display TANDEM STARTED
+
+tdmof
+
+Stop tandem
+
+display TANDEM TERMINATED
+
+dcd
+
+Modem hangup
+
+off
+
+mirof
+
+Stop mirror
+
+display MIRROR TERMINATED ON ONE TERM
+
+alrm
+
+Alarm
+
+un dm,bp, useralarm
+
+tdet
+
+t-det (U
+
+display Tape detached with (U)
+
+pwr
+
+Power off
+
+off
+
+Resets all signals to their default.
+
+trap * default
+
+Disables the signal associated with tandem on pib 49.
+
+trap pib 49 tdmon
+
+Sets the tandem on trap to display a message in reverse video.
+
+trap tdmof display @(-13)tandem entered@(-14)
